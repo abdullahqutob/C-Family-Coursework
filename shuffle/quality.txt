@@ -1,0 +1,19 @@
+Shuffles: 1 | Average Quality: 0.79592
+Shuffles: 2 | Average Quality: 0.65306
+Shuffles: 3 | Average Quality: 0.57143
+Shuffles: 4 | Average Quality: 0.55102
+Shuffles: 5 | Average Quality: 0.53061
+Shuffles: 6 | Average Quality: 0.46939
+Shuffles: 7 | Average Quality: 0.44898
+Shuffles: 8 | Average Quality: 0.48980
+Shuffles: 9 | Average Quality: 0.51020
+Shuffles: 10 | Average Quality: 0.48980
+Shuffles: 11 | Average Quality: 0.46939
+Shuffles: 12 | Average Quality: 0.46939
+Shuffles: 13 | Average Quality: 0.44898
+Shuffles: 14 | Average Quality: 0.42857
+Shuffles: 15 | Average Quality: 0.42857
+
+Given the results above, I would suggest shuffling 8 or 9 times to get the optimal shuffle quality.
+Interestingly, shuffling it too many times can be detrimental to achieveing a high quality deck. 
+This is likely because cards that were in a shuffled position were being moved back to their original location.
