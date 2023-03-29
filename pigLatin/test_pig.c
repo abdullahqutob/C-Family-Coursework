@@ -20,7 +20,7 @@ int main() {
         assert(strcmp(result, expected[i]) == 0);
 
         /* Print test result */
-        printf("%s -> %s\n", testWords[i], result);
+        printf("%s => %s\n", testWords[i], result);
 
         /* Free memory allocated for result */
         free(result);

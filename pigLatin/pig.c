@@ -1,20 +1,19 @@
 #include "pig.h"
 #include "pig.c"
 
-char * pig(char*);
 
 /**
  * Checks if the character is a vowel or y | [a,e,i,o,u,y].
  * Returns True if its a vowel, false if its a consonant.
  * @param x The character being checked
- * @return If it is a vowel
+ * @return 1 if it is a vowel, 0 if not
 */
-bool isCharVowel(char x){
+int is_vowel(char x){
     x = tolower(x);
     if (x == 'a' || x == 'e' || x == 'i' || x == 'o' || x == 'u' || x == 'y'){
-        return true;
+        return 1;
     } else {
-        return false;
+        return 0;
     }
 }
 
@@ -32,7 +31,7 @@ char * pig(char * word){
 
 
     /* If first letter is a vowel and not 'y' */
-    if (isCharVowel(word[0]) && firstLetter != 'y'){
+    if (is_vowel(word[0]) == 1 && firstLetter != 'y'){
         
         /* Allocate memory to fit word + 'way' */
         pigWord = malloc(sizeof(word) + sizeof(char) * 3);
@@ -57,7 +56,7 @@ char * pig(char * word){
         } 
 
         /* skip first cluster of consonants, or if there are no vowels, skip the whole word.*/
-        while (!isCharVowel(word[i]) && word[i] != '\0'){
+        while (is_vowel(word[i]) == 0 && word[i] != '\0'){
             i++;
         }
 

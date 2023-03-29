@@ -1,6 +1,5 @@
 include screenshot of it working on the following sentences:
 
-the question of whether a computer can think is no more interesting than the
-question of whether a submarine can swim
+The question of whether a computer can think is no more interesting than the question of whether a submarine can swim
 
-my aunt yearns for yellow cats
+My aunt yearns for yellow cats
