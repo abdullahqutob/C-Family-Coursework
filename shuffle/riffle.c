@@ -61,7 +61,7 @@ void riffle(void *L, int len, int size, int N) {
 
     /* For loop that calls riffle_once N times */
     int i;
-    for (int i = 0; i < N; i++){
+    for (i = 0; i < N; i++){
         riffle_once(L, len, size, work);
     }
 
