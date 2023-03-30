@@ -184,7 +184,6 @@ int beggar(int Nplayers, int* deck, int talkative) {
     }
 
     /* Create player hands and ids */
-    int i;
 	for (i = 0; i < Nplayers; i++) {
 		players[i].hand = malloc(52 * sizeof(int));
 		players[i].id = i;
@@ -193,7 +192,6 @@ int beggar(int Nplayers, int* deck, int talkative) {
     /* Distribute cards from pile to players */
 	int* cardSplit = split_cards(Nplayers);	
 	int* tempDeck = gamePile->pile;
-    int i;
 	for (i = 0; i < Nplayers; i++) {
 		players[i].handSize = cardSplit[i];
         int j;
@@ -303,7 +301,6 @@ int beggar(int Nplayers, int* deck, int talkative) {
 	}
 
     /* Free all mallocs */
-    int i;
     for (i = 0; i < Nplayers; i++) {
 		free(players[i].hand);
 	}
@@ -311,39 +308,4 @@ int beggar(int Nplayers, int* deck, int talkative) {
 	free(gamePile);
 	free(players);
 	return turns;
-}
-
-{
-	int sum = 0;
-
-	struct gameStatistics* Statistics = malloc(sizeof(struct gameStatistics));
-
-	Statistics->shortest = 1000;
-	Statistics->longest = 2000;
-    int i;
-    for (i = 0; i < games; i++) {
-
-		/* Create deck */
-		int deck[] = {2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9, 10, 10, 10, 10, 11, ,11, 11, 11, 12, 12, 12, 12, 13, 13, 13, 13, 14, 14, 14, 14};
-
-		/* Riffle shuffle deck */
-        riffle(deck, 52, sizeof(int), 8);
-
-        /* Run beggar game */
-        int turns = beggar(Nplayers, deck, 0);
-
-        /* If its shorter than previous shortest */
-		if (turns < Statistics->shortest) {
-			Statistics->shortest = turns;	
-		}
-        /* If its longer than previous longest */
-		if (turns > Statistics->longest) {
-			Statistics->longest = turns;
-		}
-		sum += turns;
-	}
-
-	Statistics->average = sum / games;
-
-	return Statistics;
 }
