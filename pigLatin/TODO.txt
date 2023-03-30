@@ -1,5 +1,0 @@
-include screenshot of it working on the following sentences:
-
-The question of whether a computer can think is no more interesting than the question of whether a submarine can swim
-
-My aunt yearns for yellow cats
