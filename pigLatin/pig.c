@@ -1,5 +1,4 @@
 #include "pig.h"
-#include "pig.c"
 
 
 /**
