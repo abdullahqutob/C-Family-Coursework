@@ -243,7 +243,7 @@ int beggar(int Nplayers, int* deck, int talkative) {
 			reward = take_turn(&players[currentPlayer], gamePile);
 
 			int loserCounter = 0;
-            int i;
+            
             for (i = 0; i < Nplayers; i++) {
 				if (players[i].handSize == 0) {
 					loserCounter ++;
@@ -258,7 +258,7 @@ int beggar(int Nplayers, int* deck, int talkative) {
                     previousID = previous_player(previousID, Nplayers);
                 }
                 /* Give previous player the reward to end of hand */
-                int i;
+                
                 for (i = 0; i < reward->pileSize; i++) {
                     players[previousID].hand[players[previousID].handSize] = reward->pile[i];
                     players[previousID].handSize ++;
@@ -282,7 +282,7 @@ int beggar(int Nplayers, int* deck, int talkative) {
 
 	    /* Print final pile */
 		printf("Final pile: ");
-        int i;
+        
         for (i = 0; i < gamePile->pileSize; i++) {
 			printf("%d, ", gamePile->pile[i]);	
 		}
